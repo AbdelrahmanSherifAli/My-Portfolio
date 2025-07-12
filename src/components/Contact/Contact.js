@@ -64,7 +64,7 @@ const Contact = () => {
 
             {/* Center: Contact form */}
             <div className="contact-form">
-              <form>
+              <form action="https://formsubmit.co/abdelrhmansherif85@gmail.com" method="POST">
                 <div className='form-group'>
                   <input type="text" placeholder='Full Name' name='name' required />
                 </div>
