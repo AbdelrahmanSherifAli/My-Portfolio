@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { createPortal } from 'react-dom';
-import { FaTimes, FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaTimes, FaGithub } from 'react-icons/fa';
 
 const Portfolio = ({ theme }) => {
     const [selectedProject, setSelectedProject] = useState(null);
