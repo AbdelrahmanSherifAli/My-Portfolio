@@ -9,13 +9,13 @@ const Home = ({ theme }) => {
                 <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
                     <div className="relative inline-block group -rotate-6">
                         {/* Outer glow ring */}
-                        <div className="absolute inset-0 blob-style bg-gradient-to-br from-zinc-600/30 via-zinc-700/20 to-transparent blur-xl scale-110 group-hover:scale-115 transition-transform duration-500"></div>
+                        <div className="absolute inset-0 rounded-full bg-gradient-to-br from-zinc-600/30 via-zinc-700/20 to-transparent blur-xl scale-110 group-hover:scale-115 transition-transform duration-500"></div>
                         {/* Main image container */}
-                        <div className="relative w-64 h-64 md:w-80 md:h-80 overflow-hidden border-[3px] border-zinc-700/50 shadow-[0_0_40px_rgba(0,0,0,0.5)] blob-style bg-zinc-800 group-hover:border-zinc-600/60 transition-all duration-500">
+                        <div className="relative w-64 h-64 md:w-80 md:h-80 overflow-hidden border-[3px] border-zinc-700/50 shadow-[0_0_40px_rgba(0,0,0,0.5)] rounded-full bg-zinc-800 group-hover:border-zinc-600/60 transition-all duration-500">
                             {/* Animated Border Ring */}
                             <div className="border-line-path animate-spin-slow"></div>
 
-                            <img src="/personal_photo.jpeg" alt="Abdelrahman Sherif" className="w-full h-full object-contain" />
+                            <img src="/personal_photo.jpeg" alt="Abdelrahman Sherif" className="w-full h-full object-cover" />
                             {/* Subtle inner gradient overlay */}
                             <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/20 via-transparent to-zinc-700/10 pointer-events-none"></div>
                         </div>

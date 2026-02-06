@@ -113,7 +113,7 @@ const About = ({ theme }) => {
                                 <div className={`absolute -inset-4 bg-gradient-to-br transition-opacity duration-500 ${theme === 'light' ? 'from-zinc-400/10' : 'from-white/5'} via-transparent to-zinc-400/5 blur-2xl opacity-100 animate-pulse`}></div>
 
                                 {/* Main image container (Animation removed) */}
-                                <div className="relative w-full aspect-[4/5] lg:aspect-[4/5] max-w-[220px] mx-auto lg:max-w-none overflow-hidden border border-[var(--border-color)] bg-[var(--bg-card)] shadow-2xl transition-all duration-700 rounded-sm">
+                                <div className="relative w-full aspect-square max-w-[220px] mx-auto lg:max-w-[300px] overflow-hidden border border-[var(--border-color)] bg-[var(--bg-card)] shadow-2xl transition-all duration-700 rounded-full">
                                     <img
                                         src="/personal_photo.jpeg"
                                         alt="Abdelrahman Sherif"
@@ -138,10 +138,6 @@ const About = ({ theme }) => {
                                     {/* Subtle inner gradient overlay */}
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none opacity-40"></div>
                                 </div>
-
-                                {/* Decorative elements */}
-                                <div className="absolute -top-4 -right-4 w-12 h-12 border-t-2 border-r-2 border-[var(--border-color)] -z-10"></div>
-                                <div className="absolute -bottom-4 -left-4 w-24 h-24 border-b-2 border-l-2 border-[var(--border-color)] -z-10 transition-transform duration-700"></div>
                             </div>
                         </div>
 
