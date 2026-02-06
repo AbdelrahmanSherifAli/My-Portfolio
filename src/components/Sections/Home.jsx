@@ -28,7 +28,7 @@ const Home = ({ theme }) => {
                         Abdelrahman <span className="text-zinc-500">Sherif</span>
                     </h2>
                     <p className="text-lg lg:text-xl text-zinc-400 max-w-lg mx-auto lg:mx-0 mb-8 font-light leading-relaxed">
-                        I’m an AI enthusiast based in Egypt, passionate about data, machine learning, and intelligent technologies.
+                        I’m an AI Engineer based in Egypt, passionate about data, machine learning, and intelligent technologies.
                     </p>
 
                     <div className="flex justify-center lg:justify-start space-x-6 text-zinc-500">
