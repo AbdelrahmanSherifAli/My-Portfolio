@@ -10,11 +10,14 @@ import Service from './components/Sections/Service';
 import Portfolio from './components/Sections/Portfolio';
 import Contact from './components/Sections/Contact';
 
+import TransitionOverlay from './components/Layout/TransitionOverlay';
+
 function App() {
     const [activeSection, setActiveSection] = useState(() => {
         return localStorage.getItem('activeSection') || 'home';
     });
     const [isInitialLoad, setIsInitialLoad] = useState(true);
+    const [isThemeTransitioning, setIsThemeTransitioning] = useState(false);
     const [theme, setTheme] = useState(() => {
         return localStorage.getItem('theme') || 'dark';
     });
@@ -33,7 +36,16 @@ function App() {
     }, [theme]);
 
     const toggleTheme = () => {
-        setTheme(prev => prev === 'dark' ? 'light' : 'dark');
+        setIsThemeTransitioning(true);
+        // Switch theme at the midpoint of the 1.2s animation (0.6s)
+        setTimeout(() => {
+            setTheme(prev => prev === 'dark' ? 'light' : 'dark');
+        }, 600);
+
+        // Reset transition state after animation completes
+        setTimeout(() => {
+            setIsThemeTransitioning(false);
+        }, 1200);
     };
 
     const renderSection = () => {
@@ -51,6 +63,7 @@ function App() {
         <div className="flex min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)] font-sans selection:bg-white selection:text-black transition-colors duration-500">
             <Preloader onComplete={() => setIsInitialLoad(false)} />
             <Cursor />
+            {isThemeTransitioning && <TransitionOverlay />}
 
             <Sidebar activeSection={activeSection} setActiveSection={setActiveSection} theme={theme} toggleTheme={toggleTheme} />
             <MobileNav activeSection={activeSection} setActiveSection={setActiveSection} theme={theme} toggleTheme={toggleTheme} />

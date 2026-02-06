@@ -235,3 +235,64 @@
     pointer-events: none;
     z-index: 10;
 }
+
+/* Theme Switch Transition Animations */
+@keyframes curtainWipeLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    40%,
+    60% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes curtainWipeRight {
+    0% {
+        transform: translateX(100%);
+    }
+
+    40%,
+    60% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes lineScan {
+    0% {
+        height: 0;
+        opacity: 0;
+    }
+
+    40%,
+    60% {
+        height: 100%;
+        opacity: 1;
+    }
+
+    100% {
+        height: 0;
+        opacity: 0;
+    }
+}
+
+.animate-curtainWipeLeft {
+    animation: curtainWipeLeft 1.2s cubic-bezier(0.7, 0, 0.3, 1) forwards;
+}
+
+.animate-curtainWipeRight {
+    animation: curtainWipeRight 1.2s cubic-bezier(0.7, 0, 0.3, 1) forwards;
+}
+
+.animate-lineScan {
+    animation: lineScan 1.2s cubic-bezier(0.7, 0, 0.3, 1) forwards;
+}
