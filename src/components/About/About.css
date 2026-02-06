@@ -1,282 +1,258 @@
-/* Main about section container */
 .about-section {
-    background-color: var(--light-gray);
-    height: 600px;
-    display: flex;
-    justify-content: center;
-    padding: 7rem 0;
+  background-color: var(--dark-bg);
+  padding: 80px 60px;
+  min-height: 100vh;
 }
 
-/* Inner wrapper for about content (left and right) */
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .about-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 0 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
-/* Left section big title */
-.left-section .title {
-    font-size: 50px;
-    margin-bottom: 40px;
-    color: var(--black);
-    text-align: center;
+.section-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  color: var(--dark-text-light);
+  text-transform: uppercase;
+  margin-bottom: 15px;
 }
 
-/* Common title styles */
-.title {
-    color: var(--black);
-    font-family: Playfair Display;
-    font-weight: lighter;
+.section-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--dark-text);
+  margin-bottom: 50px;
+  font-family: sans-serif;
 }
 
-/* Subtitle below the main title */
-.left-section .title2 {
-    color: var(--black);
-    font-size: 24px;
-    padding: 10px 0;
+.about-image-wrapper {
+  margin-bottom: 30px;
 }
 
-/* Paragraph under the subtitle */
-.left-section .title3 {
-    color: var(--black-gray);
-    font-size: 24px;
+.about-profile-image {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
 }
 
-/* Right section heading */
-.right-section .title {
-    font-size: 50px;
-    margin-bottom: 40px;
-    text-align: center;
+.about-name-title {
+  margin-bottom: 30px;
 }
 
-/* Main paragraph content in right section */
-.right-section p {
-    font-size: 24px;
-    color: var(--black-gray);
-    padding: 5px 0;
+.about-name-title h2 {
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--dark-text);
+  margin-bottom: 10px;
 }
 
-/* Personal info text */
-.right-section .about-personal-info {
-    color: var(--black);
+.about-name-title p {
+  font-size: 18px;
+  color: var(--dark-text-light);
 }
 
-/* Animated underline link effect */
-.link {
-    position: relative;
-    color: var(--black-gray);
+.about-description {
+  max-width: 800px;
+  margin-bottom: 50px;
 }
 
-/* Invisible line under link - animates on hover */
-.link::after {
-    content: "";
-    position: absolute;
-    background-color: var(--black-blue);
-    height: 3px;
-    width: 0;
-    left: 0;
-    bottom: -3px;
-    transition: width 0.6s ease;
-    border-radius: 10px;
+.about-description p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--dark-text-light);
 }
 
-/* Link color and animation on hover */
-.link:hover {
-    color: var(--black-blue);
-    transition: all 0.7s ea;
+.about-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px 60px;
+  max-width: 800px;
+  width: 100%;
+  margin-bottom: 40px;
+  text-align: left;
 }
 
-.link:hover::after {
-    width: 100%;
-    left: 0;
+.details-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-/* ---------- RESPONSIVE DESIGN ---------- */
-
-/* Large screens (1113px - 1400px) */
-@media (min-width: 1113px) and (max-width: 1400px) {
-    .about-section {
-        height: 500px;
-        padding: 5rem 0;
-    }
-
-    .about-content {
-        padding: 0 4rem;
-    }
-
-    .left-section .title,
-    .right-section .title {
-        font-size: 40px;
-        margin-bottom: 30px;
-    }
-
-    .left-section .title2,
-    .left-section .title3,
-    .right-section p {
-        font-size: 20px;
-    }
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
-/* Tablets and small laptops (769px - 1112px) */
-@media (min-width: 769px) and (max-width: 1112px) {
-    .about-section {
-        height: auto;
-        padding: 4rem 0;
-    }
-
-    .about-content {
-        flex-direction: column;
-        align-items: center;
-        padding: 0 3rem;
-        gap: 3rem;
-    }
-
-    .left-section .title,
-    .right-section .title {
-        font-size: 35px;
-        margin-bottom: 25px;
-        padding-bottom: 10px;
-    }
-
-    .left-section .title2,
-    .left-section .title3,
-    .right-section p {
-        font-size: 18px;
-    }
-
-    .left-section,
-    .right-section {
-        text-align: center;
-        width: 100%;
-    }
-
-    /* Center icons under text */
-    .about-icon {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 1.5rem;
-    }
+.detail-label {
+  font-size: 14px;
+  color: var(--dark-text-light);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-/* Medium phones and tablets (481px - 768px) */
-@media (min-width: 481px) and (max-width: 768px) {
-    .about-section {
-        height: auto;
-        padding: 3rem 0;
-    }
-
-    .about-content {
-        flex-direction: column;
-        align-items: center;
-        padding: 0 2rem;
-        gap: 2.5rem;
-    }
-
-    .left-section .title,
-    .right-section .title {
-        font-size: 30px;
-        margin-bottom: 20px;
-        padding-bottom: 15px;
-    }
-
-    .left-section .title2,
-    .left-section .title3,
-    .right-section p {
-        font-size: 16px;
-    }
-
-    .left-section,
-    .right-section {
-        text-align: center;
-        width: 100%;
-    }
-
-    .about-icon {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 1.5rem;
-    }
+.detail-value {
+  font-size: 16px;
+  color: var(--dark-text);
+  font-weight: 400;
 }
 
-/* Small mobile (max-width: 480px) */
+.detail-value.link {
+  color: var(--dark-text);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.detail-value.link:hover {
+  color: var(--dark-text-light);
+}
+
+.about-actions {
+  margin-bottom: 40px;
+}
+
+.btn-download-cv {
+  background-color: var(--dark-card);
+  color: var(--dark-text);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 14px 40px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-download-cv:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.about-social-icons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.about-social-icons .social-icon {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--dark-card);
+  color: var(--dark-text-light);
+  font-size: 20px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.about-social-icons .social-icon:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-3px);
+}
+
+.about-social-icons .social-icon.linkedin:hover {
+  background-color: #0077b5;
+  color: #fff;
+}
+
+.about-social-icons .social-icon.github:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.about-social-icons .social-icon.instagram:hover {
+  background-color: #E1306C;
+  color: #fff;
+}
+
+.about-additional-sections {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 60px;
+  text-align: left;
+}
+
+.section-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 1024px) {
+  .about-additional-sections {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-additional-sections {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .about-section {
+    padding: 60px 40px;
+  }
+  
+  .about-details-grid {
+    gap: 25px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 40px 20px;
+  }
+  
+  .section-title {
+    font-size: 36px;
+  }
+  
+  .about-profile-image {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .about-details-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .about-name-title h2 {
+    font-size: 28px;
+  }
+}
+
 @media (max-width: 480px) {
-    .about-section {
-        height: auto;
-        padding: 2.5rem 0;
-    }
-
-    .about-content {
-        flex-direction: column;
-        align-items: center;
-        padding: 0 1.5rem;
-        gap: 2rem;
-    }
-
-    .left-section .title,
-    .right-section .title {
-        font-size: 26px;
-        margin-bottom: 18px;
-        padding-bottom: 18px;
-    }
-
-    .left-section .title2,
-    .left-section .title3,
-    .right-section p {
-        font-size: 14px;
-    }
-
-    .left-section,
-    .right-section {
-        text-align: center;
-        width: 100%;
-    }
-
-    .about-icon {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 1.5rem;
-    }
-}
-
-/* Social media icons styles */
-.about-icon {
-    display: flex;
-    gap: 25px;
-    margin-top: 25px;
-}
-
-/* Each icon design */
-.about-icon a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    background: #e0e0e0;
-    color: var(--black-gray);
-    font-size: 2rem;
-    transition: background 0.3s, color 0.3s, transform 0.2s;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
-}
-
-/* On hover, scale and invert color */
-.about-icon a:hover {
-    color: #fff;
-    transform: translateY(-3px) scale(1.08);
-}
-
-/* Small underline used under title */
-.title-underline {
-    width: 60px;
-    height: 3px;
-    background-color: var(--black-gray);
-    margin: 0 auto;
-    margin-top: -25px;
-    margin-bottom: 30px;
-    border-radius: 2px;
+  .about-profile-image {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .section-title {
+    font-size: 28px;
+  }
 }

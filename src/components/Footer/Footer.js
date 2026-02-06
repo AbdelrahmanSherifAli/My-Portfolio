@@ -28,7 +28,7 @@ const Footer = () => {
 
         {/* Copyright text */}
         <div className="footer-copy">
-          @2025 Abdelrhman Sherif All Rights Reserved.
+          @2026 Abdelrhman Sherif All Rights Reserved.
         </div>
         
       </div>

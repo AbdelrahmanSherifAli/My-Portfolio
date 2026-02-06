@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     padding: 20px 0 0 40px;
-    background-color: var(--white-page);
+    background-color: var(--dark-bg);
     position: relative;
   }
   
@@ -20,7 +20,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--navbar-color);
+    background-color: transparent;
     border-radius: 10px;
     margin-left: 32px;
     padding: 25px 32px;
@@ -36,7 +36,7 @@
     position: relative;
     text-decoration: none;
     font-size: 20px;
-    color: var(--black-gray);
+    color: var(--dark-text-light);
     padding: 15px;
   }
   
@@ -45,7 +45,7 @@
   .navbar-talk a::after {
     content: "";
     position: absolute;
-    background-color: var(--black);
+    background-color: var(--dark-text);
     height: 3px;
     width: 0;
     left: 0;
@@ -56,7 +56,7 @@
   
   .navbar-menu a:hover,
   .navbar-talk a:hover {
-    color: var(--black);
+    color: var(--dark-text);
     transition: all 0.7s ease;
   }
   
@@ -72,11 +72,11 @@
     position: absolute;
     top: 2px;
     padding-left: 2px;
-    color: var(--black-gray);
+    color: var(--dark-text-light);
   }
   
   .navbar-talk a:hover svg {
-    color: var(--black);
+    color: var(--dark-text);
     transition: all 0.7s ease;
   }
   
@@ -86,7 +86,7 @@
     background: none;
     border: none;
     font-size: 2rem;
-    color: var(--black-gray);
+    color: var(--dark-text-light);
     cursor: pointer;
     margin-right: 16px;
     z-index: 1002;
@@ -161,7 +161,7 @@
       width: 80vw;
       max-width: 340px;
       height: 100vh;
-      background: rgba(255, 255, 255, 0.85);
+      background: rgba(26, 26, 26, 0.95);
       backdrop-filter: blur(16px) saturate(180%);
       -webkit-backdrop-filter: blur(16px) saturate(180%);
       border-top-left-radius: 32px;
@@ -193,7 +193,7 @@
       background: none;
       border: none;
       font-size: 1.5rem;
-      color: var(--black-gray);
+      color: var(--dark-text-light);
       cursor: pointer;
     }
   }
@@ -239,7 +239,7 @@
       width: 50vw;
       max-width: 340px;
       height: 100vh;
-      background: rgba(255, 255, 255, 0.85);
+      background: rgba(26, 26, 26, 0.95);
       backdrop-filter: blur(16px) saturate(180%);
       -webkit-backdrop-filter: blur(16px) saturate(180%);
       border-top-left-radius: 32px;
@@ -271,7 +271,7 @@
       background: none;
       border: none;
       font-size: 1.3rem;
-      color: var(--black-gray);
+      color: var(--dark-text-light);
       cursor: pointer;
     }
   }
@@ -317,7 +317,7 @@
       width: 45vw;
       max-width: 340px;
       height: 100vh;
-      background: rgba(255, 255, 255, 0.85);
+      background: rgba(26, 26, 26, 0.95);
       backdrop-filter: blur(16px) saturate(180%);
       -webkit-backdrop-filter: blur(16px) saturate(180%);
       border-top-left-radius: 32px;
@@ -349,7 +349,7 @@
       background: none;
       border: none;
       font-size: 1.2rem;
-      color: var(--black-gray);
+      color: var(--dark-text-light);
       cursor: pointer;
     }
   }

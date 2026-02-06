@@ -10,7 +10,7 @@ const Portfolio = () => {
   });
 
   return (
-    <div style={{ background: "#eee" }}>
+    <div style={{ background: "var(--dark-bg)" }}>
       <div id='protfolio' className='portfolio-section'>
         <div className="container">
           <motion.div 

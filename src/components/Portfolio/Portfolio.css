@@ -1,13 +1,33 @@
 .portfolio-section {
-    background-color: var(--white-page);
-    height: 80vh;
+    background-color: var(--dark-bg);
+    padding: 80px 60px;
+    min-height: 100vh;
+}
+
+.portfolio-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .portfolio-content .title h2 {
-    font-size: 60px;
-    font-weight: lighter;
-    text-align: center;
-    padding: 25px 0;
+    font-size: 48px;
+    font-weight: 700;
+    text-align: left;
+    padding: 0;
+    margin-bottom: 50px;
+    color: var(--dark-text);
+    font-family: sans-serif;
+}
+
+.portfolio-content .title h2::before {
+    content: "PORTFOLIO";
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: var(--dark-text-light);
+    text-transform: uppercase;
+    margin-bottom: 15px;
 }
 
 .portfolio-grid {
@@ -42,9 +62,9 @@
 
 .portfolio-card {
     flex: 0 1 320px;
-    background: #fff;
+    background: var(--dark-card);
     border-radius: 18px;
-    box-shadow: 0 8px 32px rgba(60,60,60,0.12);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
     position: relative;
     width: 350px;
     height: 420px;
@@ -54,13 +74,13 @@
     justify-content: flex-start;
     align-items: center;
     transition: transform 0.2s, box-shadow 0.2s;
-    border: 1px solid #ececec;
+    border: 1px solid rgba(255, 255, 255, 0.1);
     scroll-snap-align: start;
 }
 
 .portfolio-card:hover {
     transform: translateY(-8px) scale(1.03);
-    box-shadow: 0 16px 40px rgba(60,60,60,0.18);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.5);
 }
 
 .portfolio-arrow {
@@ -96,7 +116,7 @@
 }
 
 .portfolio-content h3 {
-    color: #232323;
+    color: var(--dark-text);
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 8px;
@@ -105,7 +125,7 @@
 }
 
 .portfolio-content p {
-    color: #666;
+    color: var(--dark-text-light);
     font-size: 1rem;
     text-align: center;
     margin-bottom: 0;

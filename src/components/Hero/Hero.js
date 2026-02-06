@@ -1,92 +1,59 @@
 import React from "react";
 import "./Hero.css";
-import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { FaLinkedinIn, FaGithub, FaInstagram } from "react-icons/fa";
 
 const Hero = () => {
-  // Track whether the hero section is in the viewport (for animation)
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.15,
-  });
-
   return (
-    <div id="home" className="hero-section">
-      <div className="container">
-        {/* Animated wrapper for hero content */}
-        <motion.div
-          ref={ref}
-          initial={{ opacity: 0, y: 60 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7, ease: "easeOut" }}
-          className="hero-content"
-        >
-          {/* Left side of the hero (text content) */}
-          <div className="left-hero">
-            <h1>
-              Hello, It's Me <br />
-              <span style={{ fontWeight: "bold" }}>Abdelrahman Sherif</span>
-            </h1>
-
-            <h2>
-              And I’m <span className="blue-text">Software developer</span>
-            </h2>
-
-            <p>
-              AI Student At Kafr El-Sheikh University | Passionate <br />
-              About Data Science & Machine Learning
-            </p>
-
-            {/* Download CV Button */}
-            <button
-              onClick={() => {
-                const link = document.createElement("a");
-                link.href = "/cv.pdf";
-                link.download = "Abdelrahman_Sherif_CV.pdf";
-                link.click();
-              }}
-              className="btn"
-            >
-              Download CV
-            </button>
+    <section className="tokyo-home" aria-label="Home">
+      <div className="tokyo-home-inner">
+        <div className="tokyo-avatar-wrap" aria-hidden="true">
+          <div className="tokyo-avatar-ring">
+            <img
+              src="/personal_photo.jpeg"
+              alt="Abdelrahman Sherif"
+              className="tokyo-avatar"
+            />
           </div>
+        </div>
 
-          {/* Right side of the hero (social links) */}
-          <div className="right-hero">
+        <div className="tokyo-home-text">
+          <h1 className="tokyo-name">Abdelrahman Sherif</h1>
+          <p className="tokyo-role">
+            AI student focused on Machine Learning and building practical models.
+          </p>
+
+          <div className="tokyo-socials" aria-label="Social links">
             <a
+              className="tokyo-social"
               href="https://www.linkedin.com/in/abdelrahman-sherif-648aa9276/"
-              className="social-icon linkedin"
               target="_blank"
               rel="noreferrer"
+              aria-label="LinkedIn"
             >
-              <FaLinkedin />
-              <span className="text-icon">LinkedIn</span>
+              <FaLinkedinIn />
             </a>
-
             <a
+              className="tokyo-social"
               href="https://github.com/AbdelrahmanSh7"
-              className="social-icon github"
               target="_blank"
               rel="noreferrer"
+              aria-label="GitHub"
             >
               <FaGithub />
-              <span className="text-icon">GitHub</span>
             </a>
-
             <a
+              className="tokyo-social"
               href="https://www.instagram.com/3bdelrahman_sherif/"
-              className="social-icon instagram"
               target="_blank"
               rel="noreferrer"
+              aria-label="Instagram"
             >
               <FaInstagram />
-              <span className="text-icon">Instagram</span>
             </a>
           </div>
-        </motion.div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -1,273 +1,147 @@
-/* ============================= */
-/*      HERO SECTION STYLING     */
-/* ============================= */
+/* Tokyo-like Home */
+.tokyo-home {
+  height: 100%;
+  width: 100%;
+  background: var(--dark-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-.hero-section {
-  background-color: var(--white-page);
+.tokyo-home-inner {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 90px 90px;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  align-items: center;
+  gap: 60px;
+}
+
+.tokyo-avatar-wrap {
   display: flex;
   justify-content: center;
-  padding: 50px 0;
 }
 
-/* Container limits the width of the content */
-.container {
-  width: 80%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* Flex layout for the main hero content */
-.hero-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  height: 400px;
-}
-
-/* ============================= */
-/*        LEFT HERO TEXT         */
-/* ============================= */
-
-.left-hero {
-  padding-left: 80px;
-}
-
-.left-hero h1 {
-  color: var(--black);
-  font-size: 50px;
-  font-weight: lighter;
-}
-
-.left-hero h2 {
-  font-size: 25px;
-  font-weight: 500;
-  color: var(--black);
-  padding: 5px 0;
-}
-
-.blue-text {
-  color: var(--black-blue);
-}
-
-.left-hero p {
-  color: var(--black-gray);
-}
-
-/* ============================= */
-/*         DOWNLOAD BUTTON       */
-/* ============================= */
-
-.hero-content .btn {
-  position: relative;
-  border: none;
-  height: 40px;
-  width: 125px;
-  padding: 0 5px;
-  cursor: pointer;
-  border-radius: 10px;
-  z-index: 1;
-  background-color: var(--navbar-color);
-  margin-top: 10px;
-}
-
-.hero-content .btn::after {
-  content: '';
-  box-sizing: border-box;
-  position: absolute;
-  height: 0;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: 0.8s linear;
-  border-radius: 10px;
-}
-
-/* On hover, button fills with color from bottom to top */
-.hero-content .btn:hover::after {
-  background-color: var(--black-blue);
-  height: 100%;
-}
-
-/* ============================= */
-/*     SOCIAL ICON STYLING       */
-/* ============================= */
-
-/* Social icon base style */
-.social-icon {
+.tokyo-avatar-ring {
+  width: 260px;
+  height: 260px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.18);
+  border: 8px solid rgba(255, 255, 255, 0.10);
   display: flex;
   align-items: center;
-  gap: 10px;
-  background-color: var(--white-page);
-  color: var(--black-gray);
-  text-decoration: none;
-  padding: 10px 30px;
-  border-radius: 50px;
-  width: 100px;
-  overflow: hidden;
-  transition: width 0.7s ease, background-color 0.7s, color 0.7s;
-  font-size: 35px;
-  position: relative;
+  justify-content: center;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.35);
 }
 
-/* Hidden label (text) inside button */
-.social-icon span {
-  white-space: nowrap;
-  opacity: 0;
-  width: 0;
-  transition: all 0.5s ease;
-  font-size: 20px;
-}
-
-/* Expand width and show text on hover */
-.social-icon:hover {
-  width: 180px;
-}
-
-.social-icon:hover span {
-  opacity: 1;
-  width: auto;
-}
-
-/* Specific hover styles per platform */
-.linkedin:hover {
-  background-color: #0077b5;
-  color: #fff;
-}
-
-.github:hover {
-  background-color: #333;
-  color: #fff;
-}
-
-.instagram:hover {
-  background-color: #E1306C;
-  color: #fff;
-}
-
-/* Instagram gets extra width on hover */
-.right-hero .instagram:hover {
+.tokyo-avatar {
   width: 220px;
+  height: 220px;
+  border-radius: 999px;
+  object-fit: cover;
+  filter: grayscale(1) contrast(1.05);
+}
+
+.tokyo-home-text {
+  text-align: left;
+}
+
+.tokyo-name {
+  font-size: 56px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: var(--dark-text);
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.tokyo-role {
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--dark-text-light);
+  max-width: 52ch;
+}
+
+.tokyo-socials {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.tokyo-social {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  border: 1px solid var(--dark-border);
+  background: rgba(0,0,0,0.12);
+  color: var(--dark-text);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.tokyo-social:hover {
+  transform: translateY(-2px);
+  background: rgba(255,255,255,0.10);
 }
 
 /* ============================= */
 /*       RESPONSIVE DESIGN       */
 /* ============================= */
 
-/* Tablet: 769px - 941px */
-@media (min-width: 769px) and (max-width: 941px) {
-  .hero-section {
-    padding: 40px 0;
-  }
+/* Large screens (1281px - 1919px) */
+@media (min-width: 1281px) and (max-width: 1919px) {
+  .tokyo-name { font-size: 54px; }
+}
 
-  .container {
-    width: 90%;
-  }
+/* Laptop (1025px - 1280px) */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .tokyo-home-inner { grid-template-columns: 300px 1fr; gap: 50px; }
+  .tokyo-name { font-size: 48px; }
+  .tokyo-avatar-ring { width: 240px; height: 240px; }
+  .tokyo-avatar { width: 205px; height: 205px; }
+}
 
-  .hero-content {
-    flex-direction: column;
-    height: auto;
-    gap: 35px;
+/* Tablet: 769px - 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .tokyo-home-inner {
+    grid-template-columns: 1fr;
+    justify-items: center;
     text-align: center;
-    padding-top: 40px;
+    padding: 80px 40px;
+    gap: 34px;
   }
-
-  .left-hero {
-    padding-left: 0;
-  }
-
-  .right-hero {
-    display: flex;
-  }
-
-  .hero-content .btn {
-    margin-top: 20px;
-  }
-
-  .social-icon {
-    font-size: 38px;
-  }
-
-  .social-icon:hover {
-    width: 150px;
-  }
+  .tokyo-home-text { text-align: center; }
+  .tokyo-name { font-size: 44px; }
+  .tokyo-socials { justify-content: center; }
 }
 
 /* Mobile Medium: 481px - 768px */
 @media (min-width: 481px) and (max-width: 768px) {
-  .hero-section {
-    padding: 40px 0;
-  }
-
-  .container {
-    width: 80%;
-  }
-
-  .hero-content {
-    flex-direction: column;
-    height: auto;
-    gap: 35px;
+  .tokyo-home-inner {
+    grid-template-columns: 1fr;
+    justify-items: center;
     text-align: center;
-    padding-top: 40px;
+    padding: 70px 24px;
+    gap: 28px;
   }
-
-  .left-hero {
-    padding-left: 0;
-  }
-
-  .left-hero h1 {
-    font-size: 38px;
-  }
-
-  .left-hero h2 {
-    font-size: 27px;
-  }
-
-  .right-hero {
-    display: flex;
-  }
-
-  .hero-content .btn {
-    margin-top: 20px;
-  }
+  .tokyo-home-text { text-align: center; }
+  .tokyo-name { font-size: 36px; }
+  .tokyo-role { font-size: 14px; }
+  .tokyo-socials { justify-content: center; }
 }
 
 /* Mobile Small: max 480px */
 @media (max-width: 480px) {
-  .hero-section {
-    padding: 40px 0;
+  .tokyo-home-inner {
+    padding: 60px 18px;
+    gap: 22px;
   }
-
-  .container {
-    width: 80%;
-  }
-
-  .hero-content {
-    flex-direction: column;
-    height: auto;
-    gap: 35px;
-    text-align: center;
-    padding-top: 40px;
-  }
-
-  .left-hero {
-    padding-left: 0;
-  }
-
-  .left-hero h1 {
-    font-size: 30px;
-  }
-
-  .left-hero h2 {
-    font-size: 22px;
-  }
-
-  .right-hero {
-    display: flex;
-  }
-
-  .hero-content .btn {
-    margin-top: 20px;
-  }
+  .tokyo-avatar-ring { width: 210px; height: 210px; }
+  .tokyo-avatar { width: 178px; height: 178px; }
+  .tokyo-name { font-size: 30px; }
 }

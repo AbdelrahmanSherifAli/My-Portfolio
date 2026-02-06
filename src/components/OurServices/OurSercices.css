@@ -1,16 +1,35 @@
 /* ====== SECTION CONTAINER ====== */
 .our-services-section {
-  background-color: var(--white-page);
-  padding: 4rem 0;
+  background-color: var(--dark-bg);
+  padding: 80px 60px;
+  min-height: 100vh;
   overflow: hidden;
 }
 
 /* ====== SECTION TITLE ====== */
+.our-services-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .our-services-content .title h2 {
-  font-size: 60px;
-  text-align: center;
-  font-weight: 300;
-  margin-bottom: 4rem;
+  font-size: 48px;
+  text-align: left;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: var(--dark-text);
+  font-family: sans-serif;
+}
+
+.our-services-content .title h2::before {
+  content: "SERVICE";
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  color: var(--dark-text-light);
+  text-transform: uppercase;
+  margin-bottom: 15px;
 }
 
 /* ====== SWIPER CONTAINER ====== */
@@ -20,12 +39,13 @@
 
 /* ====== EACH CARD ====== */
 .service-card {
-  background-color: #f9f9f9;
+  background-color: var(--dark-card);
   border-radius: 16px;
   padding: 3rem;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
   max-width: 1100px;
   margin: auto;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .service-card .title {
@@ -36,7 +56,7 @@
 .service-card .title h3 {
   font-size: 32px;
   font-weight: 400;
-  color: var(--black);
+  color: var(--dark-text);
 }
 
 .service-card .data {
@@ -56,14 +76,14 @@
 
 .service-card .data p {
   font-size: 18px;
-  color: var(--black-gray);
+  color: var(--dark-text-light);
   line-height: 1.7;
   max-width: 500px;
 }
 
 /* ====== HIGHLIGHT ====== */
 .highlight {
-  color: var(--black);
+  color: var(--dark-text);
   font-size: 22px;
   font-weight: 600;
 }
@@ -75,21 +95,29 @@
   margin-top: 30px;
 }
 
-.swiper-pagination-bullet {
+.progress-bar {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.progress-dot {
   width: 14px;
   height: 14px;
   background-color: transparent;
-  border: 2px solid var(--black-gray);
+  border: 2px solid var(--dark-text-light);
+  border-radius: 50%;
   opacity: 1;
-  margin: 0 8px;
-  transition: all 0.3s ease;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.swiper-pagination-bullet-active {
-  background-color: var(--black-gray);
+.progress-dot.active {
+  background-color: var(--dark-text);
+  border-color: var(--dark-text);
   transform: scale(1.2);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.25);
 }
 
 /* ====== RESPONSIVE ====== */

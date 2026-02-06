@@ -1,8 +1,13 @@
 /* Main section container for the contact page */
 .contact-section {
-    background-color: var(--light-gray);
-    min-height: 100vh; /* Changed from fixed height to min-height */
-    padding: 40px 0; /* Added padding for better spacing */
+    background-color: var(--dark-bg);
+    min-height: 100vh;
+    padding: 80px 60px;
+}
+
+.contact-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* Generic container width used across sections */
@@ -12,10 +17,24 @@
 
 /* Contact section title styling */
 .contact-header .title h2 {
-    text-align: center;
-    font-size: 60px;
-    font-weight: lighter;
-    padding: 25px;
+    text-align: left;
+    font-size: 48px;
+    font-weight: 700;
+    padding: 0;
+    margin-bottom: 50px;
+    color: var(--dark-text);
+    font-family: sans-serif;
+}
+
+.contact-header .title h2::before {
+    content: "CONTACT";
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: var(--dark-text-light);
+    text-transform: uppercase;
+    margin-bottom: 15px;
 }
 
 /* Main flex layout for the contact content */
@@ -48,11 +67,12 @@
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    background: #e0e0e0;
-    color: var(--black-gray);
+    background: var(--dark-card);
+    color: var(--dark-text-light);
     font-size: 2rem;
     transition: background 0.3s, color 0.3s, transform 0.2s;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Icon hover effect */
@@ -98,10 +118,10 @@
     width: 100%;
     padding: 10px 0 8px 0;
     border: none;
-    border-bottom: 2px solid var(--black-gray);
+    border-bottom: 2px solid var(--dark-text-light);
     background: transparent;
     font-size: 1.1rem;
-    color: var(--balck); /* typo: should be --black */
+    color: var(--dark-text);
     outline: none;
     resize: none;
     transition: border-color 0.2s;
@@ -110,17 +130,17 @@
 /* Border color change on focus */
 .contact-form input:focus,
 .contact-form textarea:focus {
-    border-bottom: 2.5px solid rgba(34, 34, 34, 0.75);
+    border-bottom: 2.5px solid var(--dark-text);
 }
 
 /* Submit button styling */
 .contact-form button {
     width: 100%;
     margin-top: 15px;
-    background: var(--black-gray);
+    background: var(--dark-card);
     padding: 12px 0;
-    color: white;
-    border: none;
+    color: var(--dark-text);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 20px;
     font-size: 1.1rem;
     cursor: pointer;
@@ -129,8 +149,8 @@
 
 /* Button hover effect */
 .contact-form button:hover {
-    background: #333;
-    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--dark-text);
 }
 
 /* Right-side contact details */
@@ -142,7 +162,7 @@
 
 /* "Contact" title */
 .contact-info .contact-details div:nth-child(1) {
-    color: rgba(34, 34, 34, 0.75);
+    color: var(--dark-text);
     font-size: 24px;
     margin-bottom: 8px;
 }
@@ -150,8 +170,19 @@
 /* Email and phone */
 .contact-info .contact-details div:nth-child(2),
 .contact-info .contact-details div:nth-child(3) {
-    color: var(--black-gray);
+    color: var(--dark-text-light);
     font-size: 18px;
+}
+
+/* Link styles */
+.contact-info .link {
+    color: var(--dark-text-light);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info .link:hover {
+    color: var(--dark-text);
 }
 
 /* Icons beside email/phone */
@@ -159,19 +190,19 @@
     padding-right: 5px;
     padding-top: 13px;
     font-size: 30px;
-    color: var(--black-gray);
+    color: var(--dark-text-light);
 }
 
 /* "Location" title */
 .contact-info .contact-location div:nth-child(1) {
-    color: rgba(34, 34, 34, 0.75);
+    color: var(--dark-text);
     font-size: 24px;
     margin-bottom: 8px;
 }
 
 /* Location text */
 .contact-info .contact-location div:nth-child(2) {
-    color: var(--black-gray);
+    color: var(--dark-text-light);
     font-size: 18px;
 }
 
@@ -180,7 +211,7 @@
     padding-right: 5px;
     padding-top: 13px;
     font-size: 40px;
-    color: var(--black-gray);
+    color: var(--dark-text-light);
 }
 
 /* Scroll to top floating button */
@@ -192,16 +223,17 @@
     font-size: 20px;
     border: none;
     border-radius: 50%;
-    background-color: var(--black);
-    color: white;
+    background-color: var(--dark-card);
+    color: var(--dark-text);
     cursor: pointer;
     z-index: 1000;
     display: none;
     transition: background-color 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 #toTopBtn:hover {
-    background-color: #9c9a9a;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* ---------- RESPONSIVE DESIGN ---------- */

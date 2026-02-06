@@ -57,8 +57,8 @@ const Contact = () => {
               </div>
               <div className="contact-icons">
                 <a href="https://www.linkedin.com/in/abdelrahman-sherif-648aa9276/" className="linkedin" target="_blank" rel="noreferrer"><FaLinkedin /></a>
-                <a href="https://github.com/AbdelrahmanSh7" className="github" target="_blank" rel="noreferrer"><FaGithub /></a>
-                <a href="https://www.instagram.com/3bdelrahman_sherif/" className="instagram" target="_blank" rel="noreferrer"><FaInstagram /></a>
+                <a href="https://github.com/AbdelrahmanSherifAli" className="github" target="_blank" rel="noreferrer"><FaGithub /></a>
+                <a href="https://www.instagram.com/abdelrahmansherif01" className="instagram" target="_blank" rel="noreferrer"><FaInstagram /></a>
               </div>
             </div>
 
