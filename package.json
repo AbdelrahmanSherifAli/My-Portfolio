@@ -2,8 +2,8 @@
   "name": "prtofolio2",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://AbdelrahmanSh7.github.io/Abdelrahman_Sherif",
   "dependencies": {
-    "homepage":"http://AbdelrahmanSh7..github.io/Abdelrahman_Sherif.",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
